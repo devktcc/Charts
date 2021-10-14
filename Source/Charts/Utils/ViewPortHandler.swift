@@ -93,7 +93,8 @@ open class ViewPortHandler: NSObject
         _contentRect.origin.x = offsetLeft
         _contentRect.origin.y = offsetTop
         _contentRect.size.width = _chartWidth - offsetLeft - offsetRight
-        _contentRect.size.height = _chartHeight - offsetBottom - offsetTop
+        let contentHeight = _chartHeight - offsetBottom - offsetTop
+        _contentRect.size.height = contentHeight < 80 ? 80 : contentHeight
     }
     
     @objc open var offsetLeft: CGFloat
