@@ -91,7 +91,7 @@ open class HorizontalBarChartView: BarChartView
         }
     }
     
-    internal override func calculateOffsets()
+    open override func calculateOffsets()
     {
         var offsetLeft: CGFloat = 0.0,
         offsetRight: CGFloat = 0.0,
