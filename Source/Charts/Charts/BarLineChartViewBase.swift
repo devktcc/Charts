@@ -421,7 +421,7 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
         }
     }
     
-    internal override func calculateOffsets()
+    open override func calculateOffsets()
     {
         if !_customViewPortEnabled
         {
